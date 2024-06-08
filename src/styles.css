@@ -1,0 +1,8 @@
+/* src/styles.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+    font-family: 'Zona Pro', sans-serif;
+}
