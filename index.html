@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Companion - Task Manager</title>
+    <link rel="stylesheet" href="dist/styles.css">
+    <link rel="stylesheet" href="css/theme.css">
+</head>
+
+<body class="bg-lightBg text-lightText flex">
+    <!-- SIDEBAR -->
+    <div id="sidebar" class="bg-gray-600 text-white w-64 flex-none">
+        <div class="p-4">
+            <img src="img/cc.png" alt="logo" class="mx-auto w-12 h-12">
+            <h2 class="text-xl font-bold mb-4 text-center">Code Companion</h2>
+            <ul class="space-y-2">
+                <li class="block">Task Manager</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="flex-1">
+        <!-- LOGIN -->
+        <div id="loginPage" class="fixed inset-0 flex justify-center items-center z-50 bg-slate-50">
+            <div class="login-container bg-white rounded-lg p-6 shadow-lg">
+                <div class="logo">
+                    <img src="img/code_companion.png" alt="Code Companion Logo">
+                </div>
+                <form id="loginForm">
+                    <h2 class="text-xl font-bold mb-4 text-center">Welcome to Code Companion!</h2>
+                    <div class="mt-4 mb-2">
+                        <label for="username" class="text-left block mb-1 space-y-4">Username:</label>
+                        <input type="text" id="username" name="username" required
+                            class="w-full px-4 py-2 border rounded bg-gray-100 focus:bg-gray-200 hover:border-indigo-700 focus:border-indigo-600 transition-colors duration-300 space-y-4">
+                    </div>
+                    <div class="mt-4 mb-2">
+                        <label for="password" class="text-left block mb-1">Password:</label>
+                        <input type="password" id="password" name="password" required
+                            class="w-full px-4 py-2 border rounded bg-gray-100 focus:bg-gray-200 hover:border-indigo-700 focus:border-indigo-600 transition-colors duration-300">
+                    </div>
+                    <button type="submit" class="mt-2 bg-primary text-white p-2 rounded w-full">Login</button>
+                    <div class="error-message mt-4 text-red-500 font-bold text-sm" id="errorMessage"></div>
+                </form>
+                <div class="footer mt-4">
+                    © 2024 Code Companion. All rights reserved.
+                </div>
+            </div>
+            <div class="text-indigo-500 absolute bottom-2 right-3">
+                © by Candice Behr
+            </div>
+        </div>
+
+        <!-- TASKS -->
+        <div id="app" class="container mx-auto p-4">
+            <div class="flex justify-between items-center mb-4">
+                <h1 class="text-3xl font-bold">Task Manager</h1>
+                <button id="theme-toggle" class="bg-primary text-white p-2 rounded">Toggle Theme</button>
+            </div>
+            <div class="mb-4">
+                <input id="new-task-title" type="text" placeholder="New Task Title" class="p-2 border rounded w-full">
+                <button id="add-task" class="mt-2 bg-primary text-white p-2 rounded">Add Task</button>
+            </div>
+            <div class="flex space-x-2 mb-4">
+                <button id="filter-all" class="filter-btn bg-primary text-white p-2 rounded">All</button>
+                <button id="filter-completed" class="filter-btn bg-secondary p-2 rounded">Completed</button>
+                <button id="filter-pending" class="filter-btn bg-secondary p-2 rounded">Pending</button>
+            </div>
+            <ul id="task-list" class="mt-4"></ul>
+        </div>
+    </div>
+
+    <!-- MODAL TO ADD/EDIT TASK -->
+    <div id="editTaskModal" class="fixed z-10 inset-0 overflow-y-auto hidden">
+        <div class="flex items-center justify-center min-h-screen p-4">
+            <div class="bg-white rounded-lg overflow-hidden shadow-xl p-4">
+                <div class="mb-4">
+                    <label for="editTaskInput" class="block text-sm font-medium text-gray-700">New Title:</label>
+                    <input type="text" id="editTaskInput" class="mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm sm:text-sm border-gray-300 rounded-md">
+                </div>
+                <div class="text-right">
+                    <button id="editTaskConfirm" class="bg-primary inline-flex justify-center px-4 py-2 text-sm font-medium text-white hover:bg-indigo-700 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Confirm</button>
+                    <button id="editTaskCancel" class=" bg-primary ml-2 inline-flex justify-center px-4 py-2 text-sm font-medium text-white hover:bg-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/jquery-3.7.1.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/login_auth.js"></script>
+</body>
+</html>
