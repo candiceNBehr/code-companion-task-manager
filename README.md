@@ -16,6 +16,7 @@ Code Companion is a web application designed to help developers manage their tas
 4. Start your Apache server.
 5. Open your web browser and navigate to http://localhost/code-companion (or wherever you copied the project files).
 6. You should see the Code Companion application running.
+7. For the sake of this project the login credentials are in the users.json file.
 
 # Additional Features
 - Implemented drag-and-drop functionality to reorder tasks.
