@@ -52,7 +52,7 @@ $(document).ready(function () {
   let nextTaskId = 16; // Start the new task ID from 16
   function addTask(title) {
     $.post(apiUrl, { title, completed: false }, function (newTask) {
-      // Since jsonplaceholder is a mock API, we'll use our counter for new task IDs
+      // Since jsonplaceholder is a mock API, i'll use our counter for new task IDs
       newTask.id = nextTaskId++;
       newTask.completed = false;
 
