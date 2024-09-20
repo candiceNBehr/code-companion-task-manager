@@ -22,6 +22,9 @@ Code Companion is a web application designed to help developers manage their tas
 - Implemented drag-and-drop functionality to reorder tasks.
 - Used a mock API (JSONPlaceholder) to simulate backend CRUD operations.
 
+# Tech-stack
+- HTML, Javascript, jQuery, Tailwind CSS
+
 # Improvements
 If I had more time, here are some improvements and additional features I would consider adding:
 
